@@ -1,0 +1,62 @@
+/* .contented=={
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: red;
+    padding: 20px;
+} */
+
+.holder {
+    width: 100%;
+    height: auto;
+    background: url("https://images.pexels.com/photos/14032494/pexels-photo-14032494.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    /* background-color: black; */
+    /* opacity: 0.7; */
+    background-position: center;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+
+}
+
+.faqs {
+    /* margin-top: 40px; */
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: #2B3D58;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* animation: slide-in-left 3s ease-out; */
+    /* margin-bottom: 20px; */
+}
+
+.faqs-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+
+    /* margin-bottom: 10px; */
+}
+
+.testimonial-author {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* @keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+} */
