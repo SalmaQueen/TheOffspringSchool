@@ -16,7 +16,7 @@ function Hero() {
           <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} ml-2 text-white`}>
             <span className="text-dark">20%</span> Discount For{" "}
-            <span className="text-dark">1 Month</span> Account
+            <span className="text-dark">1 Month</span> Fees
           </p>
         </div>
 
