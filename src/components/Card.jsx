@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import Aos from "aos";
+
 const data = [
   {
     id: 1,

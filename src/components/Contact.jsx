@@ -1,6 +1,35 @@
 import React from "react";
 import Aos from "aos";
+import { ToastContainer, toast } from 'react-toastify';
+
+
+
+
 const Contact = () => {
+
+  function Submit(e) {
+    const formEle = document.querySelector("form");
+    const formDatab = new FormData(formEle);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbxPYMT_Bn-eLgWzXmspFyn_B__revYIKjYTXFkl3iIEzOahtyNi1QzOhlNLBy-0cxxt_A/exec",
+      {
+        method: "POST",
+        body: formDatab
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        toast.success('Data submitted successfully!');
+
+      })
+      .catch((error) => {
+        // console.log(error);
+        toast.error('An error occurred while submitting data.');
+
+      });
+  }
+
   Aos.init({ duration: 1000 });
 
   return (
@@ -11,22 +40,18 @@ const Contact = () => {
           Contact Us
         </h1>
         </div>
-    
-        <form className="bg-white contact-form shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <div className="mb-4">
+        <form className="form bg-white  contact-form shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={(e) => Submit(e)}>
+        <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
               htmlFor="name"
             >
               Name
             </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="name"
-              type="text"
-              placeholder="John Doe"
-            />
-          </div>
+            <input placeholder="Your Name" name="Name" type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+ />
+
+            </div>
           <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
@@ -34,14 +59,11 @@ const Contact = () => {
             >
               Email
             </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="email"
-              type="email"
-              placeholder="example@gmail.com"
-            />
-          </div>
-          <div className="mb-4">
+            <input placeholder="Your Email" name="Email" type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+/>
+
+            </div>
+            <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
               htmlFor="message"
@@ -50,20 +72,19 @@ const Contact = () => {
             </label>
             <textarea
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-              id="message"
-              placeholder="Enter your message here..."
-            />
+              placeholder="Your Message" name="Message" type="text" />
           </div>
           <div className="flex items-center justify-center">
-            
-            <button
-              className="bg-blueDark hover:bg-blueLight text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-            >
-              Submit
-            </button>
+
+          <input className="bg-blueDark hover:bg-blueLight text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+ name="Name" type="submit" />
           </div>
         </form>
+
+        <ToastContainer />
+
+    
+    
       </div>
     </div>
   );
