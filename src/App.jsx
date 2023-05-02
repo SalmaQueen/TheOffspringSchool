@@ -9,7 +9,7 @@ import Faqs from "./components/FAQS/Faqs";
 import Contact from "./components/Contact";
 const App = () => (
   <div className="bg-white w-full overflow-hidden">
-    <div className={` bg-blueDark text-white ${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={` bg-nav  ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <Navbar />
       </div>

@@ -14,11 +14,11 @@ const Navbar = () => {
     
     <img src={logo} alt=" " className='w-[74px] h-[72px] '/>
 
-    <ul className='list-none sm:flex  hidden justify-end items-center flex-1'>
+    <ul className='list-none sm:flex  hidden justify-end items-center flex-1 '>
         {navLinks.map((nav, index)=>(
             <li key={nav.id} 
-            className={`font-poppins font-normal cursor-pointer  text-[16px ]
-             ${index===navLinks.length-1 ? 'mr-0' : 'mr-10'} text-white`}>
+            className={`font-poppins hover:text-blueDark cursor-pointer  text-white font-bold text-[16px  ]
+             ${index===navLinks.length-1 ? 'mr-0' : 'mr-10'} `}>
                 <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
         ))}

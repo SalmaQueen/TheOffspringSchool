@@ -39,3 +39,11 @@
     gap: 20px;
   }
 }
+
+.bg-nav {
+  background: #06a2dac5;
+box-shadow:41px 41px 82px #06a2da4b,
+           -41px -41px 82px #2b3d586f;
+color: black;
+}
+
